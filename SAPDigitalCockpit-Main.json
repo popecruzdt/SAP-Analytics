@@ -1,0 +1,701 @@
+{
+   "metadata": {
+      "configurationVersions": [
+         2
+      ],
+      "clusterVersion": "1.181.144.20191202-115613"
+   },
+   "id": "24218701-e75f-42fa-be7e-9f806d542de3",
+   "dashboardMetadata": {
+      "name": "SAP Digital Cockpit",
+      "shared": true,
+      "owner": "joseph.bologna@dynatrace.com",
+      "sharingDetails": {
+         "linkShared": true,
+         "published": true
+      },
+      "dashboardFilter": {
+         "timeframe": "l_24_HOURS",
+         "managementZone": null
+      }
+   },
+   "tiles": [
+      {
+         "name": "SAP-ECC",
+         "tileType": "CUSTOM_APPLICATION",
+         "configured": true,
+         "bounds": {
+            "top": 342,
+            "left": 532,
+            "width": 304,
+            "height": 152
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "assignedEntities": [
+            "CUSTOM_APPLICATION-D6D7996C3AF148BF"
+         ]
+      },
+      {
+         "name": "",
+         "tileType": "HOSTS",
+         "configured": true,
+         "bounds": {
+            "top": 38,
+            "left": 836,
+            "width": 190,
+            "height": 228
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "filterConfig": {
+            "type": "HOST",
+            "customName": "ECC App Servers",
+            "defaultName": "ECC App Servers",
+            "chartConfig": {
+               "type": "TIMESERIES",
+               "series": [],
+               "resultMetadata": {}
+            },
+            "filtersPerEntityType": {
+               "HOST": {
+                  "AUTO_TAGS": [
+                     "SAP-ECC Application Tier"
+                  ]
+               }
+            }
+         },
+         "chartVisible": true
+      },
+      {
+         "name": "",
+         "tileType": "HOSTS",
+         "configured": true,
+         "bounds": {
+            "top": 266,
+            "left": 836,
+            "width": 190,
+            "height": 228
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "filterConfig": {
+            "type": "HOST",
+            "customName": "Databases",
+            "defaultName": "Databases",
+            "chartConfig": {
+               "type": "TIMESERIES",
+               "series": [],
+               "resultMetadata": {}
+            },
+            "filtersPerEntityType": {
+               "HOST": {
+                  "AUTO_TAGS": [
+                     "Databases"
+                  ]
+               }
+            }
+         },
+         "chartVisible": true
+      },
+      {
+         "name": "Live user activity",
+         "tileType": "UEM_ACTIVE_SESSIONS",
+         "configured": true,
+         "bounds": {
+            "top": 38,
+            "left": 532,
+            "width": 304,
+            "height": 304
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         }
+      },
+      {
+         "name": "Application Overview",
+         "tileType": "HEADER",
+         "configured": true,
+         "bounds": {
+            "top": 0,
+            "left": 0,
+            "width": 532,
+            "height": 38
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         }
+      },
+      {
+         "name": "Infrastructure",
+         "tileType": "HEADER",
+         "configured": true,
+         "bounds": {
+            "top": 0,
+            "left": 836,
+            "width": 190,
+            "height": 38
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         }
+      },
+      {
+         "name": "Network metrics",
+         "tileType": "NETWORK",
+         "configured": true,
+         "bounds": {
+            "top": 38,
+            "left": 1026,
+            "width": 304,
+            "height": 304
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         }
+      },
+      {
+         "name": "Network status",
+         "tileType": "NETWORK_MEDIUM",
+         "configured": true,
+         "bounds": {
+            "top": 342,
+            "left": 1026,
+            "width": 304,
+            "height": 152
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         }
+      },
+      {
+         "name": "",
+         "tileType": "CUSTOM_CHARTING",
+         "configured": true,
+         "bounds": {
+            "top": 38,
+            "left": 0,
+            "width": 266,
+            "height": 152
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "filterConfig": {
+            "type": "MIXED",
+            "customName": "Availability",
+            "defaultName": "Custom chart",
+            "chartConfig": {
+               "type": "SINGLE_VALUE",
+               "series": [
+                  {
+                     "metric": "ext:tech.SAP.available",
+                     "aggregation": "AVG",
+                     "percentile": null,
+                     "type": "LINE",
+                     "entityType": "MONITORED_ENTITY˟CUSTOM_DEVICE_GROUP",
+                     "dimensions": [],
+                     "sortAscending": false,
+                     "sortColumn": true,
+                     "aggregationRate": "TOTAL"
+                  }
+               ],
+               "resultMetadata": {}
+            },
+            "filtersPerEntityType": {}
+         }
+      },
+      {
+         "name": "",
+         "tileType": "CUSTOM_CHARTING",
+         "configured": true,
+         "bounds": {
+            "top": 38,
+            "left": 266,
+            "width": 266,
+            "height": 152
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "filterConfig": {
+            "type": "MIXED",
+            "customName": "Average time",
+            "defaultName": "Custom chart",
+            "chartConfig": {
+               "type": "SINGLE_VALUE",
+               "series": [
+                  {
+                     "metric": "ext:tech.SAP.Task.avgtottime",
+                     "aggregation": "AVG",
+                     "percentile": null,
+                     "type": "LINE",
+                     "entityType": "IOT",
+                     "dimensions": [
+                        {
+                           "id": "1",
+                           "name": "tasktype",
+                           "values": [],
+                           "entityDimension": false
+                        }
+                     ],
+                     "sortAscending": false,
+                     "sortColumn": true,
+                     "aggregationRate": "TOTAL"
+                  }
+               ],
+               "resultMetadata": {}
+            },
+            "filtersPerEntityType": {
+               "IOT": {
+                  "SPECIFIC_ENTITIES": [
+                     "CUSTOM_DEVICE-A07C1690D8B29AD7",
+                     "CUSTOM_DEVICE-1B9BE7418D6868EE",
+                     "CUSTOM_DEVICE-27FE3EDB3E74FE6C",
+                     "CUSTOM_DEVICE-14328E7F040FDFE2",
+                     "CUSTOM_DEVICE-E712F0893DE0D29F",
+                     "CUSTOM_DEVICE-91D0D2C46D62CA39",
+                     "CUSTOM_DEVICE-5F9AB03863E682F0"
+                  ]
+               }
+            }
+         }
+      },
+      {
+         "name": "",
+         "tileType": "CUSTOM_CHARTING",
+         "configured": true,
+         "bounds": {
+            "top": 190,
+            "left": 266,
+            "width": 266,
+            "height": 152
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "filterConfig": {
+            "type": "MIXED",
+            "customName": "Dialog Network Time",
+            "defaultName": "Custom chart",
+            "chartConfig": {
+               "type": "SINGLE_VALUE",
+               "series": [
+                  {
+                     "metric": "ext:tech.SAP.guinetworktime",
+                     "aggregation": "AVG",
+                     "percentile": null,
+                     "type": "LINE",
+                     "entityType": "IOT",
+                     "dimensions": [
+                        {
+                           "id": "1",
+                           "name": "tasktype",
+                           "values": [],
+                           "entityDimension": false
+                        }
+                     ],
+                     "sortAscending": false,
+                     "sortColumn": true,
+                     "aggregationRate": "TOTAL"
+                  }
+               ],
+               "resultMetadata": {}
+            },
+            "filtersPerEntityType": {
+               "IOT": {
+                  "SPECIFIC_ENTITIES": [
+                     "CUSTOM_DEVICE-A07C1690D8B29AD7",
+                     "CUSTOM_DEVICE-1B9BE7418D6868EE",
+                     "CUSTOM_DEVICE-27FE3EDB3E74FE6C",
+                     "CUSTOM_DEVICE-14328E7F040FDFE2",
+                     "CUSTOM_DEVICE-E712F0893DE0D29F",
+                     "CUSTOM_DEVICE-91D0D2C46D62CA39",
+                     "CUSTOM_DEVICE-5F9AB03863E682F0"
+                  ]
+               }
+            }
+         }
+      },
+      {
+         "name": "User Activity",
+         "tileType": "HEADER",
+         "configured": true,
+         "bounds": {
+            "top": 0,
+            "left": 532,
+            "width": 304,
+            "height": 38
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         }
+      },
+      {
+         "name": "Network",
+         "tileType": "HEADER",
+         "configured": true,
+         "bounds": {
+            "top": 0,
+            "left": 1026,
+            "width": 304,
+            "height": 38
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         }
+      },
+      {
+         "name": "",
+         "tileType": "CUSTOM_CHARTING",
+         "configured": true,
+         "bounds": {
+            "top": 190,
+            "left": 0,
+            "width": 266,
+            "height": 152
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "filterConfig": {
+            "type": "MIXED",
+            "customName": "Session Count",
+            "defaultName": "Custom chart",
+            "chartConfig": {
+               "type": "SINGLE_VALUE",
+               "series": [
+                  {
+                     "metric": "builtin:apps.other.sessionCount.osAndDataCollectionLevel",
+                     "aggregation": "NONE",
+                     "percentile": null,
+                     "type": "LINE",
+                     "entityType": "MONITORED_ENTITY˟DEVICE_APPLICATION",
+                     "dimensions": [
+                        {
+                           "id": "2",
+                           "name": "Data collection level",
+                           "values": [],
+                           "entityDimension": false
+                        },
+                        {
+                           "id": "1",
+                           "name": "Operating system",
+                           "values": [],
+                           "entityDimension": true
+                        }
+                     ],
+                     "sortAscending": false,
+                     "sortColumn": true,
+                     "aggregationRate": "TOTAL"
+                  }
+               ],
+               "resultMetadata": {}
+            },
+            "filtersPerEntityType": {
+               "MONITORED_ENTITY˟DEVICE_APPLICATION": {
+                  "SPECIFIC_ENTITIES": [
+                     "CUSTOM_APPLICATION-D6D7996C3AF148BF"
+                  ]
+               }
+            }
+         }
+      },
+      {
+         "name": "",
+         "tileType": "CUSTOM_CHARTING",
+         "configured": true,
+         "bounds": {
+            "top": 342,
+            "left": 0,
+            "width": 266,
+            "height": 152
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "filterConfig": {
+            "type": "MIXED",
+            "customName": "Action Count",
+            "defaultName": "Custom chart",
+            "chartConfig": {
+               "type": "SINGLE_VALUE",
+               "series": [
+                  {
+                     "metric": "builtin:apps.other.uaCount.osAndVersion",
+                     "aggregation": "NONE",
+                     "percentile": null,
+                     "type": "LINE",
+                     "entityType": "MONITORED_ENTITY˟DEVICE_APPLICATION",
+                     "dimensions": [
+                        {
+                           "id": "2",
+                           "name": "App Version",
+                           "values": [],
+                           "entityDimension": false
+                        }
+                     ],
+                     "sortAscending": false,
+                     "sortColumn": true,
+                     "aggregationRate": "TOTAL"
+                  }
+               ],
+               "resultMetadata": {}
+            },
+            "filtersPerEntityType": {
+               "MONITORED_ENTITY˟DEVICE_APPLICATION": {
+                  "SPECIFIC_ENTITIES": [
+                     "CUSTOM_APPLICATION-D6D7996C3AF148BF"
+                  ]
+               }
+            }
+         }
+      },
+      {
+         "name": "",
+         "tileType": "CUSTOM_CHARTING",
+         "configured": true,
+         "bounds": {
+            "top": 342,
+            "left": 266,
+            "width": 266,
+            "height": 152
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "filterConfig": {
+            "type": "MIXED",
+            "customName": "Database time",
+            "defaultName": "Custom chart",
+            "chartConfig": {
+               "type": "SINGLE_VALUE",
+               "series": [
+                  {
+                     "metric": "ext:tech.SAP.Task.dbtime",
+                     "aggregation": "AVG",
+                     "percentile": null,
+                     "type": "LINE",
+                     "entityType": "IOT",
+                     "dimensions": [
+                        {
+                           "id": "1",
+                           "name": "tasktype",
+                           "values": [],
+                           "entityDimension": false
+                        }
+                     ],
+                     "sortAscending": false,
+                     "sortColumn": true,
+                     "aggregationRate": "TOTAL"
+                  }
+               ],
+               "resultMetadata": {}
+            },
+            "filtersPerEntityType": {}
+         }
+      },
+      {
+         "name": "Markdown",
+         "tileType": "MARKDOWN",
+         "configured": true,
+         "bounds": {
+            "top": 38,
+            "left": 1330,
+            "width": 266,
+            "height": 38
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "markdown": "[SAP Module Performance](#dashboard;id=fc230898-e75c-4dd9-bd0d-370268989245)"
+      },
+      {
+         "name": "Markdown",
+         "tileType": "MARKDOWN",
+         "configured": true,
+         "bounds": {
+            "top": 76,
+            "left": 1330,
+            "width": 266,
+            "height": 38
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "markdown": "[Slowest User Actions](#dashboard;id=8f97fd4b-c638-48c3-bea6-e003c9239a23)"
+      },
+      {
+         "name": "Markdown",
+         "tileType": "MARKDOWN",
+         "configured": true,
+         "bounds": {
+            "top": 190,
+            "left": 1330,
+            "width": 266,
+            "height": 38
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "markdown": "[Database and Response Time Ratios](#dashboard/dashboard;id=7e8bb827-e986-4154-935f-1b984fa1304f)"
+      },
+      {
+         "name": "Markdown",
+         "tileType": "MARKDOWN",
+         "configured": true,
+         "bounds": {
+            "top": 152,
+            "left": 1330,
+            "width": 266,
+            "height": 38
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "markdown": "[User Sessions](#usersearchoverview;filtrfilterApplication=CUSTOM_APPLICATION-D6D7996C3AF148BF)"
+      },
+      {
+         "name": "Markdown",
+         "tileType": "MARKDOWN",
+         "configured": true,
+         "bounds": {
+            "top": 228,
+            "left": 1330,
+            "width": 266,
+            "height": 38
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "markdown": "[Month End Functional Response Times](#dashboard;id=e4da2457-260b-4a39-809b-4a029c6ab6e3)"
+      },
+      {
+         "name": "Report Menu",
+         "tileType": "HEADER",
+         "configured": true,
+         "bounds": {
+            "top": 0,
+            "left": 1330,
+            "width": 266,
+            "height": 38
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         }
+      },
+      {
+         "name": "Markdown",
+         "tileType": "MARKDOWN",
+         "configured": true,
+         "bounds": {
+            "top": 114,
+            "left": 1330,
+            "width": 266,
+            "height": 38
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "markdown": "[Slowest T-Codes](#dashboard;id=fe6b5724-cc0e-4fd4-b993-ff0cbc304611)"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 494,
+            "left": 570,
+            "width": 760,
+            "height": 152
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Transaction Response Times",
+         "query": "SELECT AVG(useraction.duration) as [Avg Transaction Time], MIN(useraction.duration) as [Min Transaction Time], MAX(useraction.duration) as [Max Transaction Time], COUNT(*) as [Transaction Count] FROM useraction WHERE useraction.duration IS NOT NULL",
+         "type": "TABLE"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 494,
+            "left": 0,
+            "width": 190,
+            "height": 152
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Satisfied Transactions",
+         "query": "select count(useraction.name) from useraction WHERE apdexCategory=\"SATISFIED\"",
+         "type": "SINGLE_VALUE"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 494,
+            "left": 190,
+            "width": 190,
+            "height": 152
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Tolerated Transactions",
+         "query": "select count(useraction.name) from useraction WHERE apdexCategory=\"TOLERATING\"",
+         "type": "SINGLE_VALUE"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 494,
+            "left": 380,
+            "width": 190,
+            "height": 152
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Frustrated Transactions",
+         "query": "select count(useraction.name) from useraction WHERE apdexCategory=\"FRUSTRATED\"",
+         "type": "SINGLE_VALUE"
+      }
+   ]
+}
