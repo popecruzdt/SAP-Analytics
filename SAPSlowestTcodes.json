@@ -1,0 +1,58 @@
+{
+   "metadata": {
+      "configurationVersions": [
+         2
+      ],
+      "clusterVersion": "1.181.144.20191202-115613"
+   },
+   "id": "fe6b5724-cc0e-4fd4-b993-ff0cbc304611",
+   "dashboardMetadata": {
+      "name": "SAP Slowest Transaction Codes",
+      "shared": true,
+      "owner": "joseph.bologna@dynatrace.com",
+      "sharingDetails": {
+         "linkShared": true,
+         "published": true
+      },
+      "dashboardFilter": {
+         "timeframe": "",
+         "managementZone": null
+      }
+   },
+   "tiles": [
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 38,
+            "left": 0,
+            "width": 1330,
+            "height": 608
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "User sessions query results",
+         "query": "SELECT useraction.name as[T-code Name], useraction.duration as [Action Duration] from useraction where useraction.duration > 25000 ORDER BY useraction.duration DESC",
+         "type": "TABLE"
+      },
+      {
+         "name": "Markdown",
+         "tileType": "MARKDOWN",
+         "configured": true,
+         "bounds": {
+            "top": 0,
+            "left": 0,
+            "width": 228,
+            "height": 38
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "markdown": "[Return to SAP Digital Cockpit](#dashboard;id=24218701-e75f-42fa-be7e-9f806d542de3)"
+      }
+   ]
+}

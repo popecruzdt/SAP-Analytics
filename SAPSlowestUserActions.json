@@ -1,0 +1,52 @@
+{
+   "id": "8f97fd4b-c638-48c3-bea6-e003c9239tpc",
+   "dashboardMetadata": {
+      "name": "SAP Slowest User Actions",
+      "shared": true,
+      "owner": "anthony.pope-cruz@dynatrace.com",
+      "sharingDetails": {
+         "linkShared": true,
+         "published": true
+      },
+      "dashboardFilter": {
+         "timeframe": "",
+         "managementZone": null
+      }
+   },
+   "tiles": [
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 38,
+            "left": 0,
+            "width": 1330,
+            "height": 646
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "User sessions query results",
+         "query": "SELECT usersession.userId as [User ID], useraction.name as[T-code Name], useraction.duration as [Action Duration] from useraction where useraction.duration > 25000 ORDER BY useraction.duration DESC",
+         "type": "TABLE"
+      },
+      {
+         "name": "Markdown",
+         "tileType": "MARKDOWN",
+         "configured": true,
+         "bounds": {
+            "top": 0,
+            "left": 0,
+            "width": 228,
+            "height": 38
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "markdown": "[Return to SAP Digital Cockpit](#dashboard;id=24218701-e75f-42fa-be7e-9f806d542de3)"
+      }
+   ]
+}

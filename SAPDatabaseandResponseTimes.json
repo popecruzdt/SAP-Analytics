@@ -1,0 +1,312 @@
+{
+   "metadata": {
+      "configurationVersions": [
+         2
+      ],
+      "clusterVersion": "1.181.144.20191202-115613"
+   },
+   "id": "7e8bb827-e986-4154-935f-1b984fa1304f",
+   "dashboardMetadata": {
+      "name": "SAP Database and Response Time Ratios",
+      "shared": true,
+      "owner": "joseph.bologna@dynatrace.com",
+      "sharingDetails": {
+         "linkShared": true,
+         "published": true
+      },
+      "dashboardFilter": {
+         "timeframe": "",
+         "managementZone": null
+      }
+   },
+   "tiles": [
+      {
+         "name": "Custom chart",
+         "tileType": "CUSTOM_CHARTING",
+         "configured": true,
+         "bounds": {
+            "top": 76,
+            "left": 0,
+            "width": 608,
+            "height": 228
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "filterConfig": {
+            "type": "MIXED",
+            "customName": "Database time/Response time ratio",
+            "defaultName": "Custom chart",
+            "chartConfig": {
+               "type": "PIE",
+               "series": [
+                  {
+                     "metric": "ext:tech.SAP.dbtimeratio",
+                     "aggregation": "AVG",
+                     "percentile": null,
+                     "type": "LINE",
+                     "entityType": "IOT",
+                     "dimensions": [],
+                     "sortAscending": false,
+                     "sortColumn": true,
+                     "aggregationRate": "TOTAL"
+                  }
+               ],
+               "resultMetadata": {}
+            },
+            "filtersPerEntityType": {}
+         }
+      },
+      {
+         "name": "Custom chart",
+         "tileType": "CUSTOM_CHARTING",
+         "configured": true,
+         "bounds": {
+            "top": 304,
+            "left": 0,
+            "width": 608,
+            "height": 228
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "filterConfig": {
+            "type": "MIXED",
+            "customName": "Database calls",
+            "defaultName": "Custom chart",
+            "chartConfig": {
+               "type": "PIE",
+               "series": [
+                  {
+                     "metric": "ext:tech.SAP.Task.dbcalls",
+                     "aggregation": "AVG",
+                     "percentile": null,
+                     "type": "LINE",
+                     "entityType": "IOT",
+                     "dimensions": [
+                        {
+                           "id": "1",
+                           "name": "tasktype",
+                           "values": [],
+                           "entityDimension": false
+                        }
+                     ],
+                     "sortAscending": false,
+                     "sortColumn": true,
+                     "aggregationRate": "TOTAL"
+                  }
+               ],
+               "resultMetadata": {}
+            },
+            "filtersPerEntityType": {}
+         }
+      },
+      {
+         "name": "Custom chart",
+         "tileType": "CUSTOM_CHARTING",
+         "configured": true,
+         "bounds": {
+            "top": 532,
+            "left": 0,
+            "width": 608,
+            "height": 228
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "filterConfig": {
+            "type": "MIXED",
+            "customName": "Database time",
+            "defaultName": "Custom chart",
+            "chartConfig": {
+               "type": "PIE",
+               "series": [
+                  {
+                     "metric": "ext:tech.SAP.Task.dbtime",
+                     "aggregation": "AVG",
+                     "percentile": null,
+                     "type": "LINE",
+                     "entityType": "IOT",
+                     "dimensions": [
+                        {
+                           "id": "1",
+                           "name": "tasktype",
+                           "values": [],
+                           "entityDimension": false
+                        }
+                     ],
+                     "sortAscending": false,
+                     "sortColumn": true,
+                     "aggregationRate": "TOTAL"
+                  }
+               ],
+               "resultMetadata": {}
+            },
+            "filtersPerEntityType": {}
+         }
+      },
+      {
+         "name": "Custom chart",
+         "tileType": "CUSTOM_CHARTING",
+         "configured": true,
+         "bounds": {
+            "top": 76,
+            "left": 684,
+            "width": 570,
+            "height": 228
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "filterConfig": {
+            "type": "MIXED",
+            "customName": "Wait time/Response time ratio",
+            "defaultName": "Custom chart",
+            "chartConfig": {
+               "type": "TOP_LIST",
+               "series": [
+                  {
+                     "metric": "ext:tech.SAP.waittimeratio",
+                     "aggregation": "AVG",
+                     "percentile": null,
+                     "type": "LINE",
+                     "entityType": "IOT",
+                     "dimensions": [],
+                     "sortAscending": false,
+                     "sortColumn": true,
+                     "aggregationRate": "TOTAL"
+                  }
+               ],
+               "resultMetadata": {}
+            },
+            "filtersPerEntityType": {}
+         }
+      },
+      {
+         "name": "Custom chart",
+         "tileType": "CUSTOM_CHARTING",
+         "configured": true,
+         "bounds": {
+            "top": 304,
+            "left": 684,
+            "width": 570,
+            "height": 228
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "filterConfig": {
+            "type": "MIXED",
+            "customName": "CPU time/Response time ratio",
+            "defaultName": "Custom chart",
+            "chartConfig": {
+               "type": "TOP_LIST",
+               "series": [
+                  {
+                     "metric": "ext:tech.SAP.cpuratio",
+                     "aggregation": "AVG",
+                     "percentile": null,
+                     "type": "LINE",
+                     "entityType": "IOT",
+                     "dimensions": [],
+                     "sortAscending": false,
+                     "sortColumn": true,
+                     "aggregationRate": "TOTAL"
+                  }
+               ],
+               "resultMetadata": {}
+            },
+            "filtersPerEntityType": {}
+         }
+      },
+      {
+         "name": "Custom chart",
+         "tileType": "CUSTOM_CHARTING",
+         "configured": true,
+         "bounds": {
+            "top": 532,
+            "left": 684,
+            "width": 570,
+            "height": 228
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "filterConfig": {
+            "type": "MIXED",
+            "customName": "Load time/Response time ratio",
+            "defaultName": "Custom chart",
+            "chartConfig": {
+               "type": "TOP_LIST",
+               "series": [
+                  {
+                     "metric": "ext:tech.SAP.loadtimeratio",
+                     "aggregation": "AVG",
+                     "percentile": null,
+                     "type": "LINE",
+                     "entityType": "IOT",
+                     "dimensions": [],
+                     "sortAscending": false,
+                     "sortColumn": true,
+                     "aggregationRate": "TOTAL"
+                  }
+               ],
+               "resultMetadata": {}
+            },
+            "filtersPerEntityType": {}
+         }
+      },
+      {
+         "name": "Database",
+         "tileType": "HEADER",
+         "configured": true,
+         "bounds": {
+            "top": 38,
+            "left": 0,
+            "width": 304,
+            "height": 38
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         }
+      },
+      {
+         "name": "Wait, CPU and Load Time",
+         "tileType": "HEADER",
+         "configured": true,
+         "bounds": {
+            "top": 38,
+            "left": 684,
+            "width": 418,
+            "height": 38
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         }
+      },
+      {
+         "name": "Markdown",
+         "tileType": "MARKDOWN",
+         "configured": true,
+         "bounds": {
+            "top": 0,
+            "left": 0,
+            "width": 228,
+            "height": 38
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "markdown": "[Return to SAP Digital Cockpit](#dashboard;id=24218701-e75f-42fa-be7e-9f806d542de3)"
+      }
+   ]
+}

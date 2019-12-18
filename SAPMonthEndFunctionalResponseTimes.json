@@ -1,0 +1,1045 @@
+{
+   "metadata": {
+      "configurationVersions": [
+         2
+      ],
+      "clusterVersion": "1.181.144.20191202-115613"
+   },
+   "id": "e4da2457-260b-4a39-809b-4a029c6ab6e3",
+   "dashboardMetadata": {
+      "name": "SAP Month End Functional Response Times",
+      "shared": true,
+      "owner": "joseph.bologna@dynatrace.com",
+      "sharingDetails": {
+         "linkShared": true,
+         "published": true
+      },
+      "dashboardFilter": {
+         "timeframe": "",
+         "managementZone": null
+      }
+   },
+   "tiles": [
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 76,
+            "left": 0,
+            "width": 190,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "GL Balances",
+         "query": "select count(usersession.userId) as [FS10] FROM useraction where useraction.name=\"FS10\"",
+         "type": "SINGLE_VALUE",
+         "timeFrameShift": "-2h"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 342,
+            "left": 0,
+            "width": 190,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "GL Account Line Items",
+         "query": "select count(usersession.userId) as [FAGLL03] FROM useraction where useraction.name like \"*FAGLL03*\"",
+         "type": "SINGLE_VALUE",
+         "timeFrameShift": "-2h"
+      },
+      {
+         "name": "User Count",
+         "tileType": "HEADER",
+         "configured": true,
+         "bounds": {
+            "top": 38,
+            "left": 0,
+            "width": 190,
+            "height": 38
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         }
+      },
+      {
+         "name": "Avg. Response Time",
+         "tileType": "HEADER",
+         "configured": true,
+         "bounds": {
+            "top": 38,
+            "left": 380,
+            "width": 266,
+            "height": 38
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         }
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 608,
+            "left": 0,
+            "width": 190,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Vendor Line Item Display",
+         "query": "select count(usersession.userId) as [FBL1N] FROM useraction where useraction.name like \"*FBL1N*\"",
+         "type": "SINGLE_VALUE",
+         "timeFrameShift": "-2h"
+      },
+      {
+         "name": "User Actions",
+         "tileType": "HEADER",
+         "configured": true,
+         "bounds": {
+            "top": 38,
+            "left": 190,
+            "width": 190,
+            "height": 38
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         }
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 1140,
+            "left": 0,
+            "width": 190,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Depreciation Posting Run",
+         "query": "select count(usersession.userId) as [AFAB] FROM useraction where useraction.name=\"AFAB\"",
+         "type": "SINGLE_VALUE",
+         "timeFrameShift": "-2h"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 874,
+            "left": 0,
+            "width": 190,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Customer Line Item Display",
+         "query": "select count(usersession.userId) as [FBL5N] FROM useraction where useraction.name like \"*FBL5N*\"",
+         "type": "SINGLE_VALUE",
+         "timeFrameShift": "-2h"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 1406,
+            "left": 0,
+            "width": 190,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Periodic Asset Postings",
+         "query": "select count(usersession.userId) as [ASKB] FROM useraction where useraction.name=\"ASKB\"",
+         "type": "SINGLE_VALUE",
+         "timeFrameShift": "-2h"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 1672,
+            "left": 0,
+            "width": 190,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Custom Transaction",
+         "query": "select count(usersession.userId) as [ZFI_0001] FROM useraction where useraction.name=\"ZFI_0001\"",
+         "type": "SINGLE_VALUE",
+         "timeFrameShift": "-2h"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 1938,
+            "left": 0,
+            "width": 190,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Custom Transaction",
+         "query": "select count(usersession.userId) as [ZFI_0004] FROM useraction where useraction.name=\"ZFI_0004\"",
+         "type": "SINGLE_VALUE",
+         "timeFrameShift": "-2h"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 76,
+            "left": 190,
+            "width": 190,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "GL Balances",
+         "query": "select count(useraction.name) as [FS10] FROM useraction where useraction.name=\"FS10\"",
+         "type": "SINGLE_VALUE",
+         "timeFrameShift": "-2h"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 342,
+            "left": 190,
+            "width": 190,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "GL Account Line Items",
+         "query": "select count(useraction.name) as [FAGLL03] FROM useraction where useraction.name like \"*FAGLL03*\"",
+         "type": "SINGLE_VALUE",
+         "timeFrameShift": "-2h"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 608,
+            "left": 190,
+            "width": 190,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Vendor Line Item Display",
+         "query": "select count(useraction.name) as [FBL1N] FROM useraction where useraction.name like \"*FBL1N*\" ",
+         "type": "SINGLE_VALUE",
+         "timeFrameShift": "-2h"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 874,
+            "left": 190,
+            "width": 190,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Customer Line Item Display",
+         "query": "select count(useraction.name) as [FBL5N] FROM useraction where useraction.name like \"*FBL5N*\"",
+         "type": "SINGLE_VALUE",
+         "timeFrameShift": "-2h"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 1140,
+            "left": 190,
+            "width": 190,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Depreciation Posting Run",
+         "query": "select count(useraction.name) as [AFAB] FROM useraction where useraction.name=\"AFAB\"",
+         "type": "SINGLE_VALUE",
+         "timeFrameShift": "-2h"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 1406,
+            "left": 190,
+            "width": 190,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Periodic Asset Postings",
+         "query": "select count(useraction.name) as [ASKB] FROM useraction where useraction.name=\"ASKB\"",
+         "type": "SINGLE_VALUE",
+         "timeFrameShift": "-2h"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 1672,
+            "left": 190,
+            "width": 190,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Custom Transaction",
+         "query": "select count(useraction.name) as [ZFI_0001] FROM useraction where useraction.name=\"ZFI_0001\"",
+         "type": "SINGLE_VALUE",
+         "timeFrameShift": "-2h"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 2204,
+            "left": 190,
+            "width": 190,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Custom Transaction",
+         "query": "select count(useraction.name) as [ZFI_0128] FROM useraction where useraction.name=\"ZFI_0128\"",
+         "type": "SINGLE_VALUE",
+         "timeFrameShift": "-2h"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 76,
+            "left": 380,
+            "width": 266,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "GL Balances",
+         "query": "select avg(useraction.duration) as [FS10] FROM useraction where useraction.name=\"FS10\"",
+         "type": "SINGLE_VALUE",
+         "timeFrameShift": "-2h"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 342,
+            "left": 380,
+            "width": 266,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "GL Account Line Items",
+         "query": "select avg(useraction.duration) as [FAGLL03] FROM useraction where useraction.name like \"*FAGLL03*\"",
+         "type": "SINGLE_VALUE",
+         "timeFrameShift": "-2h"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 608,
+            "left": 380,
+            "width": 266,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Vendor Line Item Display",
+         "query": "select avg(useraction.duration) as [FBL1N] FROM useraction where useraction.name like \"*FBL1N*\"",
+         "type": "SINGLE_VALUE",
+         "timeFrameShift": "-2h"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 874,
+            "left": 380,
+            "width": 266,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Customer Line Item Display",
+         "query": "select avg(useraction.duration) as [FBL5N] FROM useraction where useraction.name like \"*FBL5N*\"",
+         "type": "SINGLE_VALUE",
+         "timeFrameShift": "-2h"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 1140,
+            "left": 380,
+            "width": 266,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Depreciation Posting Run",
+         "query": "select avg(useraction.duration) as [AFAB] FROM useraction where useraction.name=\"AFAB\"",
+         "type": "SINGLE_VALUE",
+         "timeFrameShift": "-2h"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 1406,
+            "left": 380,
+            "width": 266,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Periodic Asset Postings",
+         "query": "select avg(useraction.duration) as [ASKB] FROM useraction where useraction.name=\"ASKB\"",
+         "type": "SINGLE_VALUE",
+         "timeFrameShift": "-2h"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 1672,
+            "left": 380,
+            "width": 266,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Custom Transaction",
+         "query": "select avg(useraction.duration) as [ZFI_0001] FROM useraction where useraction.name=\"ZFI_0001\"",
+         "type": "SINGLE_VALUE",
+         "timeFrameShift": "-2h"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 1938,
+            "left": 380,
+            "width": 266,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Custom Transaction",
+         "query": "select avg(useraction.duration) as [ZFI_0004] FROM useraction where useraction.name=\"ZFI_0004\"",
+         "type": "SINGLE_VALUE",
+         "timeFrameShift": "-2h"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 76,
+            "left": 646,
+            "width": 608,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "GL Balances",
+         "query": "select startTime, useraction.duration as [FS10] FROM useraction where useraction.name=\"FS10\"  order by startTime DESC",
+         "type": "LINE_CHART"
+      },
+      {
+         "name": "Performance Trend (ms)",
+         "tileType": "HEADER",
+         "configured": true,
+         "bounds": {
+            "top": 38,
+            "left": 646,
+            "width": 608,
+            "height": 38
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         }
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 342,
+            "left": 646,
+            "width": 608,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "GL Account Line Items",
+         "query": "select startTime, useraction.duration as [FAGLL03] FROM useraction where useraction.name like \"*FAGLL03*\" order by startTime DESC",
+         "type": "LINE_CHART"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 608,
+            "left": 646,
+            "width": 608,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Vendor Line Item Display",
+         "query": "select startTime, useraction.duration as [FBL1N] FROM useraction where useraction.name like \"*FBL1N*\" order by startTime DESC",
+         "type": "LINE_CHART"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 874,
+            "left": 646,
+            "width": 608,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Customer Line Item Display",
+         "query": "select startTime, useraction.duration as [FBL5N] FROM useraction where useraction.name like \"*FBL5N*\" order by startTime DESC",
+         "type": "LINE_CHART"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 1140,
+            "left": 646,
+            "width": 608,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Depreciation Posting Run",
+         "query": "select startTime, useraction.duration as [AFAB] FROM useraction where useraction.name=\"AFAB\" order by startTime DESC",
+         "type": "LINE_CHART"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 1406,
+            "left": 646,
+            "width": 608,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Periodic Asset Postings",
+         "query": "select startTime, useraction.duration as [ASKB] FROM useraction where useraction.name=\"ASKB\" order by startTime DESC",
+         "type": "LINE_CHART"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 1672,
+            "left": 646,
+            "width": 608,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Custom Transaction",
+         "query": "select startTime, useraction.duration as [ZFI_0001] FROM useraction where useraction.name=\"ZFI_0001\" ORDER BY startTime DESC",
+         "type": "LINE_CHART"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 1938,
+            "left": 646,
+            "width": 608,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Custom Transaction",
+         "query": "select startTime, useraction.duration as [ZFI_0004] FROM useraction where useraction.name=\"ZFI_0004\" order by startTime DESC",
+         "type": "LINE_CHART"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 76,
+            "left": 1254,
+            "width": 418,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "GL Balances - User performance > 500ms",
+         "query": "select startTime as [Start Time], usersession.userId as [User ID], useraction.duration as [Action Duration] from useraction where useraction.name=\"FS10\" and useraction.duration > 500 ORDER BY useraction.duration DESC",
+         "type": "TABLE"
+      },
+      {
+         "name": "Performance Outliers - By User ID",
+         "tileType": "HEADER",
+         "configured": true,
+         "bounds": {
+            "top": 38,
+            "left": 1254,
+            "width": 418,
+            "height": 38
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         }
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 342,
+            "left": 1254,
+            "width": 418,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "GL Account Line Items - User performance > 1000msms",
+         "query": "select startTime as [Start Time], usersession.userId as [User ID], useraction.duration as [Action Duration] from useraction where useraction.name like \"*FAGLL03*\" and useraction.duration > 1000 ORDER BY useraction.duration DESC",
+         "type": "TABLE"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 608,
+            "left": 1254,
+            "width": 418,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Vendor Line Item Display - User performance > 1400ms",
+         "query": "select startTime as [Start Time], usersession.userId as [User ID], useraction.duration as [Action Duration] from useraction where useraction.name like \"*FBL1N*\" and useraction.duration > 1400 ORDER BY useraction.duration DESC",
+         "type": "TABLE"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 874,
+            "left": 1254,
+            "width": 418,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Customer Line Item Display - User performance > 1500ms",
+         "query": "select startTime as [Start Time], usersession.userId as [User ID], useraction.duration as [Action Duration] from useraction where useraction.name like \"*FBL5N*\" and useraction.duration > 1500 ORDER BY useraction.duration DESC",
+         "type": "TABLE"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 1140,
+            "left": 1254,
+            "width": 418,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Depreciation Posting Run - User performance > 1500ms",
+         "query": "select startTime as [Start Time], usersession.userId as [User ID], useraction.duration as [Action Duration] from useraction where useraction.name=\"AFAB\" and useraction.duration > 1500 ORDER BY useraction.duration DESC",
+         "type": "TABLE"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 1406,
+            "left": 1254,
+            "width": 418,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Periodic Asset Posting - User performance > 1500ms",
+         "query": "select startTime as [Start Time], usersession.userId as [User ID], useraction.duration as [Action Duration] from useraction where useraction.name=\"ASKB\" and useraction.duration > 1500 ORDER BY useraction.duration DESC",
+         "type": "TABLE"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 1672,
+            "left": 1254,
+            "width": 418,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Custom Transaction ZFI_0001 - User performance > 1200ms",
+         "query": "select startTime as [Start Time], usersession.userId as [User ID], useraction.duration as [Action Duration] from useraction where useraction.name=\"ZFI_0001\" and useraction.duration > 1500 ORDER BY useraction.duration DESC",
+         "type": "TABLE"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 1938,
+            "left": 1254,
+            "width": 418,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Custom Transaction ZFI_0004 - User performance > 3500ms",
+         "query": "select startTime as [Start Time], usersession.userId as [User ID], useraction.duration as [Action Duration] from useraction where useraction.name=\"ZFI_0004\" and useraction.duration > 3500 ORDER BY useraction.duration DESC",
+         "type": "TABLE"
+      },
+      {
+         "name": "Markdown",
+         "tileType": "MARKDOWN",
+         "configured": true,
+         "bounds": {
+            "top": 0,
+            "left": 0,
+            "width": 228,
+            "height": 38
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "markdown": "[Return to SAP Digital Cockpit](#dashboard;id=24218701-e75f-42fa-be7e-9f806d542de3)"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 2204,
+            "left": 0,
+            "width": 190,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Custom Transaction",
+         "query": "select count(usersession.userId) as [ZFI_0128] FROM useraction where useraction.name=\"ZFI_0128\"",
+         "type": "SINGLE_VALUE",
+         "timeFrameShift": "-2h"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 1938,
+            "left": 190,
+            "width": 190,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Custom Transaction",
+         "query": "select count(useraction.name) as [ZFI_0004] FROM useraction where useraction.name=\"ZFI_0004\"",
+         "type": "SINGLE_VALUE",
+         "timeFrameShift": "-2h"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 2204,
+            "left": 380,
+            "width": 266,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Custom Transaction",
+         "query": "select avg(useraction.duration) as [ZFI_0128] FROM useraction where useraction.name=\"ZFI_0128\"",
+         "type": "SINGLE_VALUE",
+         "timeFrameShift": "-2h"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 2204,
+            "left": 646,
+            "width": 608,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Custom Transaction",
+         "query": "select startTime, useraction.duration as [ZFI_0128] FROM useraction where useraction.name=\"ZFI_0128\" order by startTime DESC",
+         "type": "LINE_CHART"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 2204,
+            "left": 1254,
+            "width": 418,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Custom Transaction ZFI_0004 - User performance > 3500ms",
+         "query": "select startTime as [Start Time], usersession.userId as [User ID], useraction.duration as [Action Duration] from useraction where useraction.name=\"ZFI_0128\" and useraction.duration > 3500 ORDER BY useraction.duration DESC",
+         "type": "TABLE"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 2470,
+            "left": 0,
+            "width": 190,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Custom Transaction",
+         "query": "select count(usersession.userId) as [ZFI_0241] FROM useraction where useraction.name=\"ZFI_0241\"",
+         "type": "SINGLE_VALUE",
+         "timeFrameShift": "-2h"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 2470,
+            "left": 190,
+            "width": 190,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Custom Transaction",
+         "query": "select count(useraction.name) as [ZFI_0241] FROM useraction where useraction.name=\"ZFI_0241\"",
+         "type": "SINGLE_VALUE",
+         "timeFrameShift": "-2h"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 2470,
+            "left": 380,
+            "width": 266,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Custom Transaction",
+         "query": "select avg(useraction.duration) as [ZFI_0241] FROM useraction where useraction.name=\"ZFI_0241\"",
+         "type": "SINGLE_VALUE",
+         "timeFrameShift": "-2h"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 2470,
+            "left": 646,
+            "width": 608,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Custom Transaction",
+         "query": "select startTime, useraction.duration as [ZFI_0241] FROM useraction where useraction.name=\"ZFI_0241\" order by startTime DESC",
+         "type": "LINE_CHART"
+      },
+      {
+         "name": "DTAQL",
+         "tileType": "DTAQL",
+         "configured": true,
+         "bounds": {
+            "top": 2470,
+            "left": 1254,
+            "width": 418,
+            "height": 266
+         },
+         "tileFilter": {
+            "timeframe": null,
+            "managementZone": null
+         },
+         "customName": "Custom Transaction ZFI_0004 - User performance > 3500ms",
+         "query": "select startTime as [Start Time], usersession.userId as [User ID], useraction.duration as [Action Duration] from useraction where useraction.name=\"ZFI_0241\" and useraction.duration > 3500 ORDER BY useraction.duration DESC",
+         "type": "TABLE"
+      }
+   ]
+}
